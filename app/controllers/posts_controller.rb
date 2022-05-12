@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @post["body"] = params["post"]["body"]
     @post["image"] = params["post"]["image"]
     @post.save
+    redirect_to "/posts"
   end
 
 end
