@@ -5,11 +5,17 @@
 <% for contact in @contacts %>
   <li>
     <a href="/contacts/<%= contact["id"] %>">
-    <%= contact["first_name"] %>
-    <%= contact["last_name"] %>
+      <%= contact["first_name"] %>
+      <%= contact["last_name"] %>
     </a>
   </li>
 <% end %>
+
+<p>
+  <a href="/contacts/new">
+    Add a Contact for <%= @company["name"] %>
+  </a>
+</p>
 
 <p>
   <a href="/companies">Back to all companies</a>
