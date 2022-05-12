@@ -1,3 +1,4 @@
+<% if @name %>
   <h1>Roll the dice, <%= @name %></h1>
 <p>
   <img src="/images/dice/<%= @die1 %>.svg">
@@ -9,3 +10,6 @@
 <p>
     <a href="/dice?name=<%= @name %>">Roll Again</a>
 </p>
+<% else %>
+  <h1>What's your name?</h1>
+<% end %>
