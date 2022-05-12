@@ -13,6 +13,11 @@ class CompaniesController < ApplicationController
   end
 
   def create
+    @company = Company.new
+    @company["name"] = params["company"]["name"]
+    @company["city"] = params["company"]["city"]
+    @company["state"] = params["company"]["state"]
+    @company.save
   end
 
 end
